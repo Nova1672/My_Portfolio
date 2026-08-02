@@ -36,10 +36,10 @@ export const navLinks: NavLink[] = [
 ];
 
 export const stats = [
-  { label: 'Projects Completed', value: 12, suffix: '+' },
-  { label: 'GitHub Repositories', value: 34, suffix: '' },
-  { label: 'Technologies Learned', value: 28, suffix: '+' },
-  { label: 'Certificates', value: 9, suffix: '' },
+  { label: 'Projects Completed', value: 5, suffix: '+' },
+  { label: 'GitHub Repositories', value: 10, suffix: '' },
+  { label: 'Technologies Learned', value: 18, suffix: '+' },
+  { label: 'Certificates', value: 6, suffix: '' },
 ];
 
 export type SkillCategory = {
@@ -314,55 +314,31 @@ export type TimelineItem = {
 
 export const education: TimelineItem[] = [
   {
-    period: '2022 — 2026',
-    title: 'B.E. Computer Science & Engineering',
+    period: '2023 — 2027',
+    title: 'B Tech Computer Science - MIT ADT UNIVERSITY',
     org: 'Specialization in AI & Analytics',
     description:
       'Coursework in data structures, algorithms, machine learning, deep learning, databases, and distributed systems. Maintaining a strong academic record with a focus on applied AI.',
     tags: ['ML', 'Deep Learning', 'Databases', 'Algorithms'],
   },
-  {
-    period: '2020 — 2022',
-    title: 'Pre-University (Science)',
-    org: 'Physics, Chemistry, Mathematics, Computer Science',
-    description:
-      'Built foundations in analytical reasoning and programming. Topper in computer science; started exploring Python and data structures.',
-    tags: ['PCM', 'CS Fundamentals'],
-  },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    period: '2025 — Present',
-    title: 'AI/ML Intern',
-    org: 'Data Science R&D Team',
+    period: 'Jun 2026 — Present',
+    title: 'ML Intern',
+    org: 'FlyRank AI',
     description:
       'Building and productionizing ML pipelines — feature engineering, model training, evaluation, and deployment. Contributing to an LLM-powered internal analytics tool.',
     tags: ['MLOps', 'LLMs', 'Python', 'FastAPI'],
   },
   {
-    period: '2024 — 2025',
-    title: 'Data Science Open Source Contributor',
-    org: 'Community Projects',
+    period: 'Jun 2025 — July 2025',
+    title: 'Data Science Intern',
+    org: 'Prodigy Infotech',
     description:
-      'Contributed to open-source data science and visualization libraries — bug fixes, documentation, and feature PRs around charting and statistical utilities.',
-    tags: ['Open Source', 'Pandas', 'Visualization'],
-  },
-  {
-    period: '2024',
-    title: 'Machine Learning Project Lead',
-    org: 'College Innovation Club',
-    description:
-      'Led a 4-member team building the Analytical Placement System end-to-end — from data collection and modeling to the dashboard and faculty handoff.',
-    tags: ['Leadership', 'Team of 4', 'End-to-end ML'],
-  },
-  {
-    period: '2023',
-    title: 'Hackathon Finalist',
-    org: 'National Data Hackathon',
-    description:
-      'Placed among the top 5 teams out of 120+ with a real-time anomaly detection prototype for IoT sensor streams.',
-    tags: ['Anomaly Detection', 'IoT', 'Real-time'],
+      'Contributed to end-to-end data science projects by cleaning and analyzing large datasets, building machine learning models, and evaluating their performance. Applied Python, Pandas, NumPy, Matplotlib, Seaborn, and scikit-learn to solve real-world predictive analytics problems.',
+    tags: ['Python','NumPy','Seaborn', 'Matplotlib','Scikit-learn','Machine Learning', 'Pandas', 'Visualization'],
   },
 ];
 
