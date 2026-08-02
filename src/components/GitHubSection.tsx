@@ -57,62 +57,13 @@ export function GitHubSection() {
                   {repo.language}
                 </span>
                 <span className="flex items-center gap-1">
-                  <Star size={12} /> {repo.stars}
+                  <Star size={12} /> 
                 </span>
                 <span className="flex items-center gap-1">
-                  <GitFork size={12} /> {repo.forks}
+                  <GitFork size={12} />
                 </span>
               </div>
             </motion.a>
           ))}
         </div>
-
-        {/* Contribution graph */}
-        <motion.div variants={fadeUp} className="glass rounded-2xl p-6">
-          <div className="mb-4 flex items-center justify-between">
-            <h3 className="text-sm font-semibold text-white">Contributions</h3>
-            <span className="text-xs text-ink-faint">Last {contributionWeeks} weeks</span>
-          </div>
-          <div className="flex gap-1.5 overflow-hidden">
-            {contributionPattern.map((week, wi) => (
-              <div key={wi} className="flex flex-col gap-1.5">
-                {week.map((level, di) => (
-                  <motion.div
-                    key={di}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: (wi * 7 + di) * 0.003, duration: 0.3 }}
-                    className={`h-3 w-3 rounded-sm ${levelColors[level]}`}
-                    title={`${level * 2} contributions`}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 flex items-center justify-end gap-1.5 text-[11px] text-ink-faint">
-            Less
-            {levelColors.map((c, i) => (
-              <span key={i} className={`h-3 w-3 rounded-sm ${c}`} />
-            ))}
-            More
-          </div>
-          <div className="mt-6 grid grid-cols-3 gap-3 border-t border-border pt-5">
-            <div>
-              <div className="font-mono text-xl font-bold text-white">412</div>
-              <div className="text-xs text-ink-faint">Contributions</div>
-            </div>
-            <div>
-              <div className="font-mono text-xl font-bold text-white">34</div>
-              <div className="text-xs text-ink-faint">Repositories</div>
-            </div>
-            <div>
-              <div className="font-mono text-xl font-bold text-white">89</div>
-              <div className="text-xs text-ink-faint">Day streak</div>
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
-    </Section>
-  );
 }
