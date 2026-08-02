@@ -16,9 +16,9 @@ export const profile = {
   intro:
     'Computer Science Engineering student specializing in Artificial Intelligence & Analytics. I build end-to-end data science and AI solutions that transform raw data into actionable insights through machine learning, analytics, and interactive applications.',
   location: 'India',
-  email: 'surajpatil.ai@gmail.com',
-  github: 'https://github.com/surajpatil-ai',
-  linkedin: 'https://www.linkedin.com/in/surajpatil-ai',
+  email: 'surajpatil1672@gmail.com',
+  github: 'https://github.com/Nova1672',
+  linkedin: 'https://www.linkedin.com/in/suraj-patil-190a02349/',
   resume: '/resume.pdf',
   available: true,
 };
@@ -55,18 +55,16 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Python', level: 95 },
       { name: 'SQL', level: 88 },
-      { name: 'JavaScript / TypeScript', level: 78 },
-      { name: 'C / C++', level: 72 },
     ],
   },
   {
     title: 'Machine Learning & AI',
     icon: Brain,
     skills: [
-      { name: 'Scikit-learn', level: 92 },
-      { name: 'TensorFlow', level: 80 },
-      { name: 'PyTorch', level: 75 },
-      { name: 'NLP & LLMs', level: 85 },
+      { name: 'Scikit-learn', level: 85 },
+      { name: 'TensorFlow', level: 75 },
+      { name: 'PyTorch', level: 70 },
+      { name: 'NLP & LLMs', level: 65 },
     ],
   },
   {
@@ -75,7 +73,6 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Pandas / NumPy', level: 95 },
       { name: 'Statistical Analysis', level: 88 },
-      { name: 'A/B Testing', level: 80 },
       { name: 'Feature Engineering', level: 90 },
     ],
   },
@@ -95,8 +92,6 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'PostgreSQL', level: 85 },
       { name: 'MongoDB', level: 80 },
-      { name: 'AWS (S3, EC2, SageMaker)', level: 72 },
-      { name: 'Supabase', level: 78 },
     ],
   },
   {
@@ -106,7 +101,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Git & GitHub', level: 92 },
       { name: 'Docker', level: 70 },
       { name: 'Jupyter / Colab', level: 95 },
-      { name: 'Linux / CLI', level: 82 },
     ],
   },
 ];

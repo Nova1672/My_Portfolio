@@ -1,3 +1,13 @@
-# My_Portfolio
+# My Portfolio
 
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-pp13xoja)
+A polished React + TypeScript portfolio site built with Vite, Tailwind CSS, and Framer Motion.
+
+## Development
+
+- Install dependencies: npm install
+- Start locally: npm run dev
+- Build for production: npm run build
+
+## Deployment
+
+This project is ready for deployment on Netlify using the built-in Vite production build.
