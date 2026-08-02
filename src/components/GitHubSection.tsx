@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Star, GitFork } from 'lucide-react';
 import { Section } from '@/components/Section';
-import { githubPinned, contributionPattern, contributionWeeks } from '@/data/portfolio';
+import { githubPinned } from '@/data/portfolio';
 import { fadeUp, stagger } from '@/lib/motion';
 
 const levelColors = [
