@@ -14,7 +14,7 @@ export const profile = {
   tagline:
     'I build AI-powered applications, machine learning solutions, and data-driven products that solve real-world problems.',
   intro:
-    'Computer Science Engineering student specializing in Artificial Intelligence & Analytics. I build end-to-end data science and AI solutions that transform raw data into actionable insights through machine learning, analytics, and interactive applications.',
+    'Computer Science Engineering student specializing in Artificial Intelligence & Analytics. I build end-to-end data science and AI solutions that transform raw data into actionable insights thr[...]
   location: 'India',
   email: 'surajpatil21084@gmail.com',
   github: 'https://github.com/Nova1672',
@@ -127,11 +127,11 @@ export const projects: Project[] = [
     title: 'Analytical Placement System',
     tagline: 'Predictive analytics for campus recruitment',
     description:
-      'A full-stack platform that predicts student placement outcomes and identifies skill gaps using a gradient-boosted ensemble trained on academic and aptitude profiles, paired with an interactive dashboard for training & placement officers.',
+      'A full-stack platform that predicts student placement outcomes and identifies skill gaps using a gradient-boosted ensemble trained on academic and aptitude profiles, paired with an interac[...]
     challenge:
       'Placement cells relied on intuition and static cutoffs, with no early-warning system for at-risk students and no visibility into which skills actually drove offers.',
     solution:
-      'Engineered a feature pipeline from transcripts, mock-test scores, and psychometric signals, then trained an XGBoost classifier calibrated for probability outputs. Built a role-based dashboard surfacing per-student risk scores and recommended upskilling paths.',
+      'Engineered a feature pipeline from transcripts, mock-test scores, and psychometric signals, then trained an XGBoost classifier calibrated for probability outputs. Built a role-based dashbo[...]
     features: [
       'Probability-calibrated placement prediction (XGBoost + isotonic)',
       'Per-student skill-gap analysis with SHAP explanations',
@@ -154,11 +154,11 @@ export const projects: Project[] = [
     title: 'Formula 1 Strategy Intelligence',
     tagline: 'Real-time race strategy & tire-degradation modeling',
     description:
-      'A telemetry-driven dashboard that models tire degradation and predicts optimal pit-window timing using historical race data and live timing feeds, letting fans and analysts explore counterfactual strategies.',
+      'A telemetry-driven dashboard that models tire degradation and predicts optimal pit-window timing using historical race data and live timing feeds, letting fans and analysts explore counter[...]
     challenge:
       'Race strategy is decided under extreme uncertainty — tire life, fuel, weather, and traffic all interact, and existing tools were either black-box or static post-race reports.',
     solution:
-      'Built a degradation model per compound from historical telemetry, layered a Monte Carlo simulator over live timing to project pit windows, and exposed everything through an interactive strategy canvas with what-if sliders.',
+      'Built a degradation model per compound from historical telemetry, layered a Monte Carlo simulator over live timing to project pit windows, and exposed everything through an interactive str[...]
     features: [
       'Per-compound tire-degradation curves (Laplace smoothing)',
       'Monte Carlo pit-window projection (10k samples / update)',
@@ -181,11 +181,11 @@ export const projects: Project[] = [
     title: 'AI Business Intelligence Platform',
     tagline: 'Conversational analytics over your warehouse',
     description:
-      'A natural-language BI layer that translates executive questions into SQL, runs them against the warehouse, and returns charts with cited sources — with guardrails for schema access and cost.',
+      'A natural-language BI layer that translates executive questions into SQL, runs them against the warehouse, and returns charts with cited sources — with guardrails for schema access and c[...]
     challenge:
       "Non-technical stakeholders couldn't self-serve analytics, and analysts were drowning in one-off SQL requests with no audit trail.",
     solution:
-      'Built a text-to-SQL agent with schema-aware retrieval, a cost-bounded execution sandbox, and an auto-chart renderer. Every answer ships with the generated SQL, row-level lineage, and confidence signals.',
+      'Built a text-to-SQL agent with schema-aware retrieval, a cost-bounded execution sandbox, and an auto-chart renderer. Every answer ships with the generated SQL, row-level lineage, and confi[...]
     features: [
       'Schema-aware text-to-SQL with few-shot retrieval',
       'Cost-bounded query sandbox with row limits',
@@ -197,7 +197,7 @@ export const projects: Project[] = [
       'Cut average ad-hoc request turnaround from 2 days to minutes',
       'Adopted by 3 internal teams',
     ],
-    stack: ['Python', 'LangChain', 'PostgreSQL', 'Supabase', 'React', 'TypeScript'],
+    stack: ['Python', 'LangChain', 'PostgreSQL', 'Supabase', 'React'],
     accent: 'from-emerald-500/20 to-teal-500/10',
     github: 'https://github.com/surajpatil-ai/ai-business-intelligence',
     demo: 'https://ai-business-intelligence.demo',
@@ -212,7 +212,7 @@ export const projects: Project[] = [
     challenge:
       'Creative teams spent most of their cycle on volume — dozens of copy variants per campaign — with inconsistent brand voice and no performance feedback loop.',
     solution:
-      'Fine-tuned a copy model on brand-approved assets, wrapped it in a guideline-grounded generation pipeline, and closed the loop with a performance-weighted retrieval index so winning patterns resurface in future briefs.',
+      'Fine-tuned a copy model on brand-approved assets, wrapped it in a guideline-grounded generation pipeline, and closed the loop with a performance-weighted retrieval index so winning pattern[...]
     features: [
       'Brand-guideline-grounded copy generation',
       'Multi-channel variant packs (search, social, display)',
@@ -252,21 +252,21 @@ export const caseStudies: CaseStudy[] = [
     id: 'case-analytical-placement-system',
     title: 'Analytical Placement System — Case Study',
     problem:
-      'Campus placement cells operated on intuition and static cutoffs. Students discovered they were unplaceable only after results arrived, and TPOs had no early-warning system to intervene with targeted upskilling.',
+      'Campus placement cells operated on intuition and static cutoffs. Students discovered they were unplaceable only after results arrived, and TPOs had no early-warning system to intervene wit[...]
     research:
-      'Interviewed 4 TPOs and 30 students across departments. Found that the strongest predictors were not CGPA alone but a combination of mock-test consistency, project portfolio depth, and communication scores — signals the existing process never combined.',
+      'Interviewed 4 TPOs and 30 students across departments. Found that the strongest predictors were not CGPA alone but a combination of mock-test consistency, project portfolio depth, and comm[...]
     architecture:
-      'A feature pipeline ingests transcripts, mock tests, and psychometric scores into a feature store. An XGBoost classifier outputs calibrated placement probabilities, and a SHAP explainer surfaces the top contributing factors per student. A FastAPI service serves predictions to a role-based React dashboard.',
+      'A feature pipeline ingests transcripts, mock tests, and psychometric scores into a feature store. An XGBoost classifier outputs calibrated placement probabilities, and a SHAP explainer sur[...]
     pipeline:
       'Nightly batch job → feature engineering (Pandas) → feature store (PostgreSQL) → model inference → probability calibration (isotonic) → SHAP attribution → dashboard cache.',
     challenges:
-      'Class imbalance skewed predictions toward the majority (placed) class. Calibration was poor out-of-the-box. SHAP explanations had to be fast enough for interactive use on a dashboard serving hundreds of students.',
+      'Class imbalance skewed predictions toward the majority (placed) class. Calibration was poor out-of-the-box. SHAP explanations had to be fast enough for interactive use on a dashboard servi[...]
     implementation:
-      'Used SMOTE + class weights to address imbalance, isotonic calibration to fix probability outputs, and pre-computed SHAP values with on-demand detail expansion to keep dashboard interactions sub-second.',
+      'Used SMOTE + class weights to address imbalance, isotonic calibration to fix probability outputs, and pre-computed SHAP values with on-demand detail expansion to keep dashboard interaction[...]
     results:
       '92% recall on at-risk students at 0.4 false-positive rate, adopted across 3 departments in a pilot, and reduced manual counseling time by ~40% as TPOs focused on flagged students.',
     lessons:
-      'Calibration matters more than raw accuracy when humans act on probabilities. Explainability is what makes a model trustworthy to non-technical stakeholders — the SHAP view was the feature TPOs cited most.',
+      'Calibration matters more than raw accuracy when humans act on probabilities. Explainability is what makes a model trustworthy to non-technical stakeholders — the SHAP view was the featur[...]
     metrics: [
       { label: 'Recall (at-risk)', value: '92%' },
       { label: 'False Positive Rate', value: '0.4' },
@@ -281,9 +281,9 @@ export const caseStudies: CaseStudy[] = [
     problem:
       'Race strategy is decided under extreme uncertainty. Tire life, fuel, weather, and traffic interact non-linearly, and fans had no way to explore counterfactual strategies in real time.',
     research:
-      'Studied 2022–2023 race telemetry and tire-degradation literature. Confirmed that degradation is compound- and track-specific and that pit-window optima shift dramatically with safety-car probability.',
+      'Studied 2022–2023 race telemetry and tire-degradation literature. Confirmed that degradation is compound- and track-specific and that pit-window optima shift dramatically with safety-car[...]
     architecture:
-      'A degradation model per compound is fit from historical telemetry. A Monte Carlo simulator projects pit windows from live timing, and an interactive strategy canvas lets users drag what-if sliders to explore alternatives.',
+      'A degradation model per compound is fit from historical telemetry. A Monte Carlo simulator projects pit windows from live timing, and an interactive strategy canvas lets users drag what-if[...]
     pipeline:
       'Live timing (OpenF1) → ingestion → degradation model → Monte Carlo pit-window projection (10k samples) → strategy canvas (Plotly + React).',
     challenges:
@@ -337,7 +337,7 @@ export const experience: TimelineItem[] = [
     title: 'Data Science Intern',
     org: 'Prodigy Infotech',
     description:
-      'Contributed to end-to-end data science projects by cleaning and analyzing large datasets, building machine learning models, and evaluating their performance. Applied Python, Pandas, NumPy, Matplotlib, Seaborn, and scikit-learn to solve real-world predictive analytics problems.',
+      'Contributed to end-to-end data science projects by cleaning and analyzing large datasets, building machine learning models, and evaluating their performance. Applied Python, Pandas, NumPy,[...]
     tags: ['Python','NumPy','Seaborn', 'Matplotlib','Scikit-learn','Machine Learning', 'Pandas', 'Visualization'],
   },
 ];
