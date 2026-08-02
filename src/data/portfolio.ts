@@ -16,7 +16,7 @@ export const profile = {
   intro:
     'Computer Science Engineering student specializing in Artificial Intelligence & Analytics. I build end-to-end data science and AI solutions that transform raw data into actionable insights through machine learning, analytics, and interactive applications.',
   location: 'India',
-  email: 'surajpatil1672@gmail.com',
+  email: 'surajpatil21084@gmail.com',
   github: 'https://github.com/Nova1672',
   linkedin: 'https://www.linkedin.com/in/suraj-patil-190a02349/',
   resume: '/resume.pdf',

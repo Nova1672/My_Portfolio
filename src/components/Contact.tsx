@@ -76,7 +76,7 @@ export function Contact() {
               </span>
               <div>
                 <div className="text-xs text-ink-faint">GitHub</div>
-                <div className="text-sm text-white">@surajpatil-ai</div>
+                <div className="text-sm text-white">Nova1672</div>
               </div>
             </a>
             <a
@@ -90,7 +90,7 @@ export function Contact() {
               </span>
               <div>
                 <div className="text-xs text-ink-faint">LinkedIn</div>
-                <div className="text-sm text-white">in/surajpatil-ai</div>
+                <div className="text-sm text-white">n/surajpatil</div>
               </div>
             </a>
           </motion.div>
@@ -101,7 +101,7 @@ export function Contact() {
             </span>
             <div>
               <div className="text-xs text-ink-faint">Location</div>
-              <div className="text-sm text-white">{profile.location} · Remote-friendly</div>
+              <div className="text-sm text-white">{profile.location} Pune</div>
             </div>
           </motion.div>
 
