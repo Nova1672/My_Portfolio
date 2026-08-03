@@ -37,7 +37,7 @@ export const navLinks: NavLink[] = [
 
 export const stats = [
   { label: 'Projects Completed', value: 5, suffix: '+' },
-  { label: 'GitHub Repositories', value: 10, suffix: '' },
+  { label: 'GitHub Repositories', value: 10, suffix: '+' },
   { label: 'Technologies Learned', value: 18, suffix: '+' },
   { label: 'Certificates', value: 6, suffix: '' },
 ];
