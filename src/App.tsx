@@ -8,7 +8,6 @@ import { Experience } from '@/components/Experience';
 import { CaseStudies } from '@/components/CaseStudies';
 import { Certificates } from '@/components/Certificates';
 import { Statistics } from '@/components/Statistics';
-import { GitHubSection } from '@/components/GitHubSection';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 
@@ -26,7 +25,6 @@ function App() {
         <Experience />
         <CaseStudies />
         <Certificates />
-        <GitHubSection />
         <Contact />
       </main>
       <Footer />
