@@ -1,22 +1,49 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Download, Github, Linkedin, Mail, MapPin, Send } from 'lucide-react';
+import { ArrowUpRight, Download, Github, Linkedin, Mail, MapPin, Send, AlertCircle } from 'lucide-react';
 import { Section } from '@/components/Section';
 import { profile } from '@/data/portfolio';
 import { fadeUp, stagger } from '@/lib/motion';
 
-export function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+// EmailJS credentials (public key is safe to expose in frontend)
+const EMAILJS_SERVICE_ID = 'service_ygnvt3p';
+const EMAILJS_TEMPLATE_ID = 'template_eyqnlwp';
+const EMAILJS_PUBLIC_KEY = 'IYSpCGmGr0n5GtVHW';
 
-  const onSubmit = (e: React.FormEvent) => {
+type Status = 'idle' | 'sending' | 'sent' | 'error';
+
+export function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<Status>('idle');
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formRef.current) return;
+
     setStatus('sending');
-    setTimeout(() => {
+    setErrorMsg('');
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+
       setStatus('sent');
       setForm({ name: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 3500);
-    }, 1200);
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setStatus('error');
+      setErrorMsg('Something went wrong. Please try again or email me directly.');
+      setTimeout(() => setStatus('idle'), 4000);
+    }
   };
 
   return (
@@ -65,7 +92,8 @@ export function Contact() {
           </motion.a>
 
           <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4">
-            <a
+            <motion.a
+              variants={fadeUp}
               href={profile.github}
               target="_blank"
               rel="noreferrer"
@@ -78,8 +106,10 @@ export function Contact() {
                 <div className="text-xs text-ink-faint">GitHub</div>
                 <div className="text-sm text-white">Nova1672</div>
               </div>
-            </a>
-            <a
+            </motion.a>
+
+            <motion.a
+              variants={fadeUp}
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -92,7 +122,7 @@ export function Contact() {
                 <div className="text-xs text-ink-faint">LinkedIn</div>
                 <div className="text-sm text-white">n/surajpatil</div>
               </div>
-            </a>
+            </motion.a>
           </motion.div>
 
           <motion.div variants={fadeUp} className="glass flex items-center gap-4 rounded-2xl p-5">
@@ -116,6 +146,7 @@ export function Contact() {
 
         {/* Form */}
         <motion.form
+          ref={formRef}
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
@@ -127,6 +158,7 @@ export function Contact() {
             <Field label="Name">
               <input
                 required
+                name="name"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="input"
@@ -137,6 +169,7 @@ export function Contact() {
               <input
                 required
                 type="email"
+                name="email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="input"
@@ -147,6 +180,7 @@ export function Contact() {
               <textarea
                 required
                 rows={5}
+                name="message"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="input resize-none"
@@ -154,6 +188,14 @@ export function Contact() {
               />
             </Field>
           </div>
+
+          {status === 'error' && (
+            <div className="mt-4 flex items-center gap-2 rounded-lg bg-red-500/10 px-4 py-2.5 text-sm text-red-400 ring-1 ring-red-500/20">
+              <AlertCircle size={15} />
+              {errorMsg}
+            </div>
+          )}
+
           <button
             type="submit"
             disabled={status === 'sending'}
