@@ -325,7 +325,7 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    period: 'Jun 2026 — Present',
+    period: 'Jul 2026 — Present',
     title: 'ML Intern',
     org: 'FlyRank AI',
     description:
